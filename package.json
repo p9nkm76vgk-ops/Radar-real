@@ -1,0 +1,17 @@
+{
+  "name": "priceradar-github-pages",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PriceRadar, PWA local de seguimiento manual de precios, sin conectores no autorizados",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/app.js && node --check src/core.js && node --check src/storage.js && node --check scripts/build.mjs && node --check scripts/verify-dist.mjs",
+    "build": "node scripts/build.mjs",
+    "verify:dist": "node scripts/verify-dist.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
